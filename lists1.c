@@ -29,7 +29,7 @@ char **list_to_strings(list_t *head)
 	list_t *node = head;
 	size_t m = list_len(head), f;
 	char **ztrz;
-	char *strs;
+	char *str;
 
 	if (!head || !m)
 		return (NULL);
@@ -38,8 +38,8 @@ char **list_to_strings(list_t *head)
 		return (NULL);
 	for (m = 0; node; node = node->next, m++)
 	{
-		strs = malloc(_strlen(node->strs) + 1);
-		if (!strs)
+		str = malloc(_strlen(node->str) + 1);
+		if (!str)
 		{
 			for (f = 0; f < m; f++)
 				free(ztrz[f]);
@@ -47,8 +47,8 @@ char **list_to_strings(list_t *head)
 			return (NULL);
 		}
 
-		strs = _strcpy(strs, node->strs);
-		ztrz[m] = strs;
+		str = _strcpy(str, node->str);
+		ztrz[m] = str;
 	}
 	ztrz[m] = NULL;
 	return (ztrz);
