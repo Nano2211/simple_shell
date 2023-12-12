@@ -12,12 +12,13 @@ int _myexit(info_t *info)
 
 	if (info->argv[1]) /* if the vector exits */
 	{
-		checkexit = _erratoi(info->argv[1]);
+		check_exit = _erratoi(info->argv[1]);
 		if (checkexit == -1)
 		{
 			info->status = 2;
 			print_error(info, "Wrong number: ");
-			_eputs('\n');
+			_eputs(info->argv[1]);
+			_eputchar('\n');
 			return (1);
 		}
 		info->err_num = _erratoi(info->argv[1]);

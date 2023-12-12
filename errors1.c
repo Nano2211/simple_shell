@@ -26,7 +26,7 @@ int _erratoi(char *s)
 			return (-1); /* for an invalid char */
 
 		}
-	return (result);
+	return (res);
 }
 
 /**
@@ -103,8 +103,8 @@ char *convert_number(long int num, int base, int flags)
 		n = -num;
 		sign = '-';
 	}
-	array = flags & CONVER_LOWERCASE  ? "0123456789abcdef" : "0123456789ABCDEF";
-	prt = &buffer[49];
+	array = flags & CONVERT_LOWERCASE  ? "0123456789abcdef" : "0123456789ABCDEF";
+	ptr = &buffer[49];
 	*ptr = '\0';
 
 	do {

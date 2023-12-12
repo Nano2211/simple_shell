@@ -51,7 +51,7 @@ int _atoi(char *s)
 	{
 		if (s[vaar] == '-')
 			sign *= -1;
-		if (s[vaar] >= '0' && s[cat] <= '9')
+		if (s[vaar] >= '0' && s[vaar] <= '9')
 		{
 			flag = 1;
 			res *= 10;
@@ -61,8 +61,8 @@ int _atoi(char *s)
 			flag = 2;
 	}
 	if (sign == -1)
-		out = -result;
+		out = -res;
 	else
-		out = result;
+		out = res;
 	return (out);
 }
