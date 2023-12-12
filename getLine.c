@@ -44,7 +44,7 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
  * @info: Parameter structure.
  * Return: Read bytes in code.
  */
-ssize_t get_input(info_t *info)
+ ssize_t get_input(info_t *info)
 {
 	static char *buf; /* Buff command for ';' */
 	static size_t i, j, len;
@@ -85,7 +85,7 @@ ssize_t get_input(info_t *info)
  * @i: size variable.
  * Return: r
  * */
-ssize_t read_buf(info_t *info, char *buf, size_t *i)
+ ssize_t read_buf(info_t *info, char *buf, size_t *i)
 {
 	ssize_t r = 0;
 
@@ -103,7 +103,7 @@ ssize_t read_buf(info_t *info, char *buf, size_t *i)
  * @length: size of  preallocated ptr buffer if not NULL.
  * Return: s
  */
-int _getline(info_t *info, char **ptr, size_t *length)
+ int _getline(info_t *info, char **ptr, size_t *length)
 {
 	static char buf[READ_BUF_SIZE];
 	static size_t i, len;
@@ -147,7 +147,7 @@ int _getline(info_t *info, char **ptr, size_t *length)
  * @sig_num: The signal num.
  * Return: void
  */
-void sigintHandler(__attribute__((unused))int sig_num)
+ void sigintHandler(__attribute__((unused))int sig_num)
 {
 	_puts("\n");
 	_puts("$ ");

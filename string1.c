@@ -7,7 +7,7 @@
  *
  * Return: a pointer to the stings destination
  */
-char *strcpy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	int dex = 0;
 
@@ -48,7 +48,7 @@ char *strcpy(char *dest, char *src)
  *
  * Return: Nothing
  */
-void _puts(char *str)
+ void _puts(char *str)
 {
 	int dex = 0;
 
@@ -68,7 +68,7 @@ void _puts(char *str)
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(char c)
+ int _putchar(char c)
 {
 	static int m;
 	static char bufr[WRITE_BUF_SIZE];
@@ -82,4 +82,3 @@ int _putchar(char c)
 		bufr[m++] = c;
 	return (1);
 }
-

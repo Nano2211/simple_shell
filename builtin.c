@@ -13,7 +13,7 @@ int _myexit(info_t *info)
 	if (info->argv[1]) /* if the vector exits */
 	{
 		check_exit = _erratoi(info->argv[1]);
-		if (checkexit == -1)
+		if (check_exit == -1)
 		{
 			info->status = 2;
 			print_error(info, "Wrong number: ");

@@ -33,7 +33,7 @@ char **list_to_strings(list_t *head)
 
 	if (!head || !m)
 		return (NULL);
-	strz = malloc(sizeof(char *) * (m + 1));
+	ztrz = malloc(sizeof(char *) * (m + 1));
 	if (!ztrz)
 		return (NULL);
 	for (m = 0; node; node = node->next, m++)
